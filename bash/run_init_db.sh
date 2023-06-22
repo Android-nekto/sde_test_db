@@ -8,7 +8,7 @@ path=`realpath sde_test_db*`
 echo $path
 
 # Запускаем контейнер PostgreSQL. Можно без указания пути -v echo $path:echo $path
-docker run --name  postgres-container -e POSTGRES_PASSWORD="@sde_password012" -e POSTGRES_USER="test_sde" -e POSTGRES_DB="demo" -v echo $path:echo $path -p 5432:5432 -d postgres
+docker run --name  postgres-container -e POSTGRES_PASSWORD="@sde_password012" -e POSTGRES_USER="test_sde" -e POSTGRES_DB="demo" -p 5432:5432 -d postgres
 
 # Выводим информацию о базе данных в контейнере PostgreSQL
 docker exec postgres-container psql -U test_sde -d demo -c "SELECT * FROM pg_database"
