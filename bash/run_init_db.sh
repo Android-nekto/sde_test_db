@@ -9,9 +9,12 @@ sleep 20
 #  Запускаем скрипт для заполнения БД
 docker exec sde-pg psql -U test_sde -d demo -f /var/lib/postgresql/data/init_db/demo.sql
 
+sleep 20
 
 # Выводим сообщение об успешном завершении скрипта
 echo "Инициализация БД прошла успешна."
+
+sleep 5
 
 
 
