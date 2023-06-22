@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Скачиваем Docker образ PostgreSQL. Не нужно, т.к. скачает, если не найдет локально.
-docker pull postgres:latest
+#docker pull postgres:latest
 
 # Путь к репозиторию определяю как  переменную
 path=`realpath sde_test_db*`
