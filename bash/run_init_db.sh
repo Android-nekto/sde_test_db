@@ -4,7 +4,7 @@
 docker run --name sde-pg -p 5432:5432  -e POSTGRES_USER=test_sde -e POSTGRES_PASSWORD=@sde_password012 -e POSTGRES_DB=demo -e PGDATA=/var/lib/postgresql/data/pgdata -v C:/Users/AGNikolaev/Desktop/learning/sde_test_db/sql:/var/lib/postgresql/data -d postgres
 
 # Даем время на внесение изменений
-sleep 20
+sleep 60
 
 #  Запускаем скрипт для заполнения БД
 docker exec sde-pg psql -U test_sde -d demo -f /var/lib/postgresql/data/init_db/demo.sql
